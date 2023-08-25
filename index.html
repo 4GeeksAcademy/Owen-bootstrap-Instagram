@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="./styles.css" rel="stylesheet" type="text/css">
+    <title>Owen Lamour BootStrap Instagram Project</title>
+    <script src="https://kit.fontawesome.com/17116ea3da.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-1" href="#">
+                <i class="fa-brands fa-instagram"></i>
+                <span>Instagram</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item active">
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                            data-bs-target="#createNewPost">
+                            Create a new post
+                        </button>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle btn-secondary ms-1 w-100 "
+                            style="background-color:grey;color: white;border-radius: 5px;height:38px;padding-top: 5px;"
+                            href="#" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-gear-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z" />
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Profile</a>
+                            <a class="dropdown-item" href="#">Accessibility</a>
+                            <a class="dropdown-item" href="#">Privacy and Data</a>
+                            <a class="dropdown-item text-danger" href="#">Log out</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <nav class="nav justify-content-center">
+        <div class="text-center nav nav-tabs" id="nav-tab" role="tablist">
+            <button style="border:0px;" class="nav-link active" id="tile-tab" data-bs-toggle="tab"
+                data-bs-target="#tile-view" type="button" role="tab" aria-controls="tile-view" aria-selected="true">
+                <i class="fa-solid fa-table-cells"></i>
+            </button>
+            <button style="border:0px;" class="nav-link" id="card-tab" data-bs-toggle="tab" data-bs-target="#card-view"
+                type="button" role="tab" aria-controls="card-view" aria-selected="false">
+                <i class="fa-solid fa-square"></i>
+            </button>
+        </div>
+    </nav>
+    <div class="modal fade" id="createNewPost" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle">Create a new post</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <strong>Caption:</strong>
+                    <div class="form-group">
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"
+                            placeholder="Add the caption of your post here"></textarea>
+                    </div>
+                    <div class="createPostModalIcons pt-2">
+                        <button type="button" class="btn btn-light" href="#">
+                            <i class="fa-solid fa-camera"></i>
+                        </button>
+                        <button type="button" class="btn btn-light" href="#">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success">Publish</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-content">
+        <div class="tab-pane active fade show" id="tile-view" role="tabpanel" aria-labelledby="tile-tab">
+            <div class="container mt-4">
+                <div class="row">
+                    <div class="d-inline-block col-sm thumb-post">
+                        <img class="w-100"
+                            src="https://media.istockphoto.com/id/143917249/photo/acacias-trees-in-the-sunset-in-serengeti-africa.jpg?s=612x612&w=0&k=20&c=KpFHXMzF_d63859OZdhae7SnvWGMV79ySHy4UV6qTa0=">
+                    </div>
+                    <div class="d-inline-block col-sm thumb-post">
+                        <img class="w-100"
+                            src="https://media.istockphoto.com/id/614509184/photo/rooftop-celebration.jpg?s=612x612&w=0&k=20&c=h7vlyx82bIBCKKZAXpISmd4icOzK8AkNifDFK8h6dlQ=">
+                    </div>
+                    <div class=" d-inline-block col-sm thumb-post">
+                        <img class="w-100"
+                            src="https://media.istockphoto.com/id/143917249/photo/acacias-trees-in-the-sunset-in-serengeti-africa.jpg?s=612x612&w=0&k=20&c=KpFHXMzF_d63859OZdhae7SnvWGMV79ySHy4UV6qTa0=">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="d-inline-block col-sm thumb-post">
+                        <img class="w-100" style="height:75%"
+                            src="https://sm.ign.com/ign_ap/review/f/fifa-22-re/fifa-22-review_yza8.jpg">
+                    </div>
+                    <div class="d-inline-block col-sm thumb-post">
+                        <img class="w-100"
+                            src="https://img.goldbelly.com/consumer/homepage/home-hero-sm-3.jpg?auto=format&ar=1%3A0.9&ixlib=react-9.0.2">
+                    </div>
+                    <div class="d-inline-block col-sm thumb-post">
+                        <img class="w-100"
+                            src="https://healthnewshub.org/wp-content/uploads/2023/06/Mens-Primary-Care.jpg">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="d-inline-block col-sm thumb-post">
+                        <img class="w-100"
+                            src="https://www.nfumutual.co.uk/globalassets/about-us/responsible-business/farming-family-in-a-field.jpg">
+                    </div>
+                    <div class="d-inline-block col-sm thumb-post">
+                        <img class="w-100"
+                            src="https://hips.hearstapps.com/hmg-prod/images/25-cars-worth-waiting-for-2019-2022-chevrolet-corvette-placement-1526569843.jpg">
+                    </div>
+                    <div class="d-inline-block col-sm thumb-post">
+                        <img class="w-100"
+                            src="https://i.pinimg.com/originals/57/0b/46/570b4648058c28c860378bf01d5d4fdf.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-content">
+        <div class="tab-pane fade" id="card-view" role="tabpanel" aria-labelledby="card-tab">
+            <div class="container mt-4">
+                <div class="row">
+                    <div class="col-6 mx-auto">
+                        <div class="card pb-3 mb-5">
+                            <div class="card-body">
+                                <div class="card-top">
+                                    <div class="title">
+                                        <h5 class="card-title">
+                                            A really cool rainbow!
+                                        </h5>
+                                    </div>
+                                    <div class="date">
+                                        <strong>
+                                            08/09
+                                        </strong>
+                                    </div>
+                                </div>
+                                <img class="mx-auto"
+                                    src="./oip1.jpg">
+                                <p class="card-text">
+                                    <span>304 Likes</span> <br>
+                                    I saw this rainbow and thought it was very pretty, so I posted it here.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 mx-auto">
+                        <div class="card pb-3 mb-5">
+                            <div class="card-body">
+                                <div class="card-top">
+                                    <div class="title">
+                                        <h5 class="card-title">
+                                            Picnic and Reading Spot
+                                        </h5>
+                                    </div>
+                                    <div class="date">
+                                        <strong>
+                                            07/30
+                                        </strong>
+                                    </div>
+                                </div>
+                                <img class="mx-auto"
+                                    src="oip1.jpg">
+                                <p class="card-text">
+                                    <span>153 Likes</span> <br>
+                                    I found the perfect spot to read and have a picnic!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 mx-auto">
+                        <div class="card pb-3 mb-5">
+                            <div class="card-body">
+                                <div class="card-top">
+                                    <div class="title">
+                                        <h5 class="card-title">
+                                            Great coffee
+                                        </h5>
+                                    </div>
+                                    <div class="date">
+                                        <strong>
+                                            07/29
+                                        </strong>
+                                    </div>
+                                </div>
+                                <img class="mx-auto"
+                                    src="oip3.jpg">
+                                <p class="card-text">
+                                    <span>267 Likes</span> <br>
+                                    Just got some great latte art from my favorite coffee shop!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 mx-auto">
+                        <div class="card pb-3 mb-5">
+                            <div class="card-body">
+                                <div class="card-top">
+                                    <div class="title">
+                                        <h5 class="card-title">
+                                            Beautiful chandelier
+                                        </h5>
+                                    </div>
+                                    <div class="date">
+                                        <strong>
+                                            07/28
+                                        </strong>
+                                    </div>
+                                </div>
+                                <img class="mx-auto"
+                                    src="https://assets.teenvogue.com/photos/5f31a0d6861f578bcc3baf40/16:9/w_2560%2Cc_limit/GettyImages-1192843057.jpg">
+                                <p class="card-text">
+                                    <span>39 Likes</span> <br>
+                                    A beautiful chandelier in the huge mansion I got after finding work as a web
+                                    developer!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 mx-auto">
+                        <div class="card pb-3 mb-5">
+                            <div class="card-body">
+                                <div class="card-top">
+                                    <div class="title">
+                                        <h5 class="card-title">
+                                            Hot spring in Yellowstone!
+                                        </h5>
+                                    </div>
+                                    <div class="date">
+                                        <strong>
+                                            07/24
+                                        </strong>
+                                    </div>
+                                </div>
+                                <img class="mx-auto"
+                                    src="https://images.pexels.com/photos/17497598/pexels-photo-17497598/free-photo-of-stream-among-sunlit-hills.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load">
+                                <p class="card-text">
+                                    <span>205 Likes</span> <br>
+                                    An incredible hot spring I found in Yellowstone
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 mx-auto">
+                        <div class="card pb-3 mb-5">
+                            <div class="card-body">
+                                <div class="card-top">
+                                    <div class="title">
+                                        <h5 class="card-title">
+                                            My incredible, perfect kitty cat
+                                        </h5>
+                                    </div>
+                                    <div class="date">
+                                        <strong>
+                                            07/22
+                                        </strong>
+                                    </div>
+                                </div>
+                                <img class="mx-auto"
+                                    src="https://images.pexels.com/photos/17021500/pexels-photo-17021500/free-photo-of-cat-looking-up.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load">
+                                <p class="card-text">
+                                    <span>3,045 Likes</span> <br>
+                                    My cat! Isn't she so cute?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 mx-auto">
+                        <div class="card pb-3 mb-5">
+                            <div class="card-body">
+                                <div class="card-top">
+                                    <div class="title">
+                                        <h5 class="card-title">
+                                            Scenic train tracks
+                                        </h5>
+                                    </div>
+                                    <div class="date">
+                                        <strong>
+                                            07/21
+                                        </strong>
+                                    </div>
+                                </div>
+                                <img class="mx-auto"
+                                    src="https://images.pexels.com/photos/7525051/pexels-photo-7525051.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load">
+                                <p class="card-text">
+                                    <span>15 Likes</span> <br>
+                                    Some very scenic train tracks
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 mx-auto">
+                        <div class="card pb-3 mb-5">
+                            <div class="card-body">
+                                <div class="card-top">
+                                    <div class="title">
+                                        <h5 class="card-title">
+                                            Fireworks!
+                                        </h5>
+                                    </div>
+                                    <div class="date">
+                                        <strong>
+                                            07/14
+                                        </strong>
+                                    </div>
+                                </div>
+                                <img class="mx-auto"
+                                    src="https://images.pexels.com/photos/17504616/pexels-photo-17504616/free-photo-of-people-sitting-in-a-convertible-car-watching-fireworks-show.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load">
+                                <p class="card-text">
+                                    <span>153 Likes</span> <br>
+                                    Some leftover fireworks from 4th of July
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 mx-auto">
+                        <div class="card pb-3 mb-5">
+                            <div class="card-body">
+                                <div class="card-top">
+                                    <div class="title">
+                                        <h5 class="card-title">
+                                            Cool statue at the Museum of History
+                                        </h5>
+                                    </div>
+                                    <div class="date">
+                                        <strong>
+                                            07/10
+                                        </strong>
+                                    </div>
+                                </div>
+                                <img class="mx-auto"
+                                    src="https://images.pexels.com/photos/17728935/pexels-photo-17728935/free-photo-of-alte-romische-statue.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load">
+                                <p class="card-text">
+                                    <span>35 Likes</span> <br>
+                                    A cool statue from the Museum of History!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
